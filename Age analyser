@@ -1,0 +1,62 @@
+def age_analyzer(age_input):
+    try:
+        
+        string_age = age_input.split(',')
+        
+        ages = []
+        
+        for a in string_age:
+            cleaned_age = a.strip()
+            
+            if not cleaned_age.isdigit():
+                raise ValueError(f"Type Error:'{cleaned_age}'is not found")
+            
+            numeric_age = int(cleaned_age)
+            
+            if numeric_age < 0 or numeric_age > 150:
+                raise ValueError(f"Limit Error: '{numeric_age}' is invalid. Ages must be strictly between 0 and 150.")
+            
+            ages.append(numeric_age)
+        
+        minor_agers = 0
+        major_agers = 0
+        total = 0
+        
+        highest = ages[0]
+        lowest = ages[0]
+        
+        for age in ages:
+            if age >= 18:
+                major_agers += 1
+            else:
+                minor_agers += 1
+            
+            if highest < age:
+                highest = age
+            
+            if lowest > age:
+                lowest = age
+            
+            total += age
+        
+        average = total / len(ages)
+    
+        print("\n---  Age Analyzer Report ---")
+        print(f"Total Ages Analyzed : {len(ages)}")
+        print(f"Adults  : {major_agers}")
+        print(f"Minors  : {minor_agers}")
+        print(f"Highest Age          : {highest}")
+        print(f"Lowest Age           : {lowest}")
+        print(f"Average Age          : {average:.2f}")
+            
+        
+    except ValueError:
+        print("\nFloat Error:Use only numbers not letters(eg:23,45,32,4,54,57)")
+    except Exception as e:
+        print(f"Error Occured:{e}")
+        
+print("\n---------------Welcome To Age Analyzer-------------")
+age_input = input("Enter the Persons age by comma separated(eg:23,54,23,16,68):")
+        
+if __name__ == "__main__":
+    age_analyzer(age_input)
