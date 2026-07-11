@@ -1,0 +1,93 @@
+# Word Counter
+
+A Python application that analyzes text and counts the frequency of each word entered by the user. The program preprocesses the input by converting it to lowercase, removing punctuation, and displaying the occurrence of every unique word.
+
+## Features
+
+- Counts the frequency of each word
+- Converts text to lowercase for consistent analysis
+- Removes punctuation using regular expressions
+- Displays unique words with their occurrence count
+- Simple and easy-to-use command-line interface
+
+## Technologies Used
+
+- Python 3
+- Regular Expressions (re Module)
+
+## Project Structure
+
+```
+word-counter-python/
+│
+├── word_counter.py
+└── README.md
+```
+
+## Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/yourusername/word-counter-python.git
+```
+
+Navigate to the project directory:
+
+```bash
+cd word-counter-python
+```
+
+Run the application:
+
+```bash
+python word_counter.py
+```
+
+## Usage
+
+Enter any sentence or paragraph when prompted. The program analyzes the text and displays the frequency of each unique word.
+
+### Sample Input
+
+```
+Python is easy to learn. Python is powerful and easy.
+```
+
+### Sample Output
+
+```
+python : 2
+is : 2
+easy : 2
+to : 1
+learn : 1
+powerful : 1
+and : 1
+```
+
+## Learning Outcomes
+
+- String Manipulation
+- Dictionaries
+- Loops
+- Regular Expressions
+- Text Processing
+- Python Functions
+
+## Future Improvements
+
+- Sort words by frequency
+- Display the total number of words
+- Ignore common stop words
+- Export results to a CSV or text file
+- Build a graphical interface using Tkinter
+- Develop a web version using Streamlit
+
+## Author
+
+Developed as a Python project to practice text processing, regular expressions, and dictionary-based word frequency analysis.
+
+## License
+
+This project is intended for educational and learning purposes.
