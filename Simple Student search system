@@ -1,0 +1,17 @@
+students = ["Arun", "Kumar", "Priya", "Rahul", "Anu"]
+
+user_input = input("Enter the student name: ")
+
+if len(user_input) == 0:
+    print("Error: Input cannot be empty!")
+
+elif not user_input.isalpha():
+    print("Invalid Input: Numbers or Symbols are not allowed!")
+
+else:
+    students_lowercase = [name.lower() for name in students]
+    
+    if user_input.lower().strip() in students_lowercase:
+        print(f"\nStudent {user_input} was Found")
+    else:
+        print(f"\nStudent {user_input} was Not Found")
